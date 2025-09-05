@@ -1,8 +1,23 @@
 
+from setup import model_llm_responses, provider
+from llm import LLMClient
+from prompt import prompt_competencies
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def main():
-    print()
 
+    llm_client = LLMClient(
+        provider=provider,   # o "openai", "huggingface"
+        model=model_llm_responses,
+        base_url=BASE_URL,  
+        api_key=OPENAI_KEY       
+    )
+
+    text = "cual es el pais mas grande del mundo"
+    prompt_completed = prompt_competencies(text)
+    response = llm_client.call(prompt_completed)
 
 
 if __name__ == "__main__":
