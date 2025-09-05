@@ -23,6 +23,8 @@ def main():
     text = "cual es el pais mas grande del mundo"
     prompt_completed = prompt_competencies(text)
     response = llm_client.call(prompt_completed)
+    print("####### RESPUESTA ######")
+    print(response)
 
 
 if __name__ == "__main__":
