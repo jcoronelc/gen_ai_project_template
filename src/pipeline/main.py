@@ -4,14 +4,19 @@ from llm import LLMClient
 from prompt import prompt_competencies
 from dotenv import load_dotenv
 
+import os
+
 load_dotenv()
+
+BASE_URL_LM = os.getenv("BASE_URL_LM")
+OPENAI_KEY = os.getenv("OPENAI_KEY")
 
 def main():
 
     llm_client = LLMClient(
         provider=provider,   # o "openai", "huggingface"
         model=model_llm_responses,
-        base_url=BASE_URL,  
+        base_url=BASE_URL_LM,  
         api_key=OPENAI_KEY       
     )
 
