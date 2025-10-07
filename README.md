@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧠 GenAI Project Template
 
 Plantilla base para proyectos de **Inteligencia Artificial Generativa (GenAI)**.  
@@ -319,3 +320,6 @@ Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 
 ---
 
+=======
+# gen_ai_project_template
+>>>>>>> 90c8360244ff6d02f6080bef5eddfc942b2ae002
