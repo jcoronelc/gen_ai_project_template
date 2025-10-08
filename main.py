@@ -1,8 +1,8 @@
 
 from setup import model_llm_responses, provider
-from gen_ai_project_template.src.utils.logging_utils import setup_print_logger
-from src.llm.llm_client import LLMClient
-from gen_ai_project_template.src.prompt.templates import prompt_one
+from gen_ai_project_template.src.utils.logger import setup_print_logger
+from gen_ai_project_template.src.llm.local_models import LLMClient
+from gen_ai_project_template.src.prompt.templates.system_prompts import prompt_one
 from dotenv import load_dotenv
 
 import os
