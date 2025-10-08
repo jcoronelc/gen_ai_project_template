@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🧠 GenAI Project Template
 
 Plantilla base para proyectos de **Inteligencia Artificial Generativa (GenAI)**.  
@@ -16,10 +15,7 @@ gen_ai_project_template/
 ├── config/                          # Configuración general
 │   ├── settings.yaml                # Configuración principal en YAML
 │   ├── model_configs.json           # Configuraciones específicas de modelos
-│   └── prompts/                     # Archivos de prompts externos
-│       ├── system_prompts.yaml
-│       └── task_prompts.json
-│
+│  
 ├── data/                            # Almacenamiento de datos
 │   ├── raw/                         # Datos crudos sin procesar
 │   │   ├── documents/               # Documentos PDF, TXT, DOCX
@@ -104,9 +100,7 @@ gen_ai_project_template/
 │   ├── utils/                       # Utilidades genéricas
 │   │   ├── __init__.py
 │   │   ├── logger.py                # Sistema de logging
-│   │   ├── config_loader.py         # Cargador de configuración
 │   │   ├── file_utils.py            # Utilidades de archivos
-│   │   ├── text_processing.py       # Procesamiento de texto
 │   │   ├── validation.py            # Validación de datos
 │   │   └── decorators.py            # Decoradores útiles
 │   │
@@ -123,26 +117,19 @@ gen_ai_project_template/
 │   │   ├── test_llm.py
 │   │   ├── test_chains.py
 │   │   ├── test_prompts.py
-│   │   └── test_utils.py
 │   ├── integration/                 # Tests de integración
 │   │   ├── test_agents.py
 │   │   ├── test_vector_db.py
 │   │   └── test_end_to_end.py
-│   └── fixtures/                    # Datos de prueba
-│       ├── sample_documents/
-│       └── test_configs/
+│   └── notebooks/                    # Datos de prueba
+│      
 │
 ├── docs/                            # Documentación
 │   ├── api/                         # Documentación de API
 │   ├── guides/                      # Guías de uso
 │   └── examples/                    # Ejemplos de código
 │
-├── examples/                        # Ejemplos de uso
-│   ├── basic_usage.py               # Uso básico
-│   ├── agent_examples.py            # Ejemplos con agentes
-│   ├── rag_pipeline.py              # Pipeline RAG completo
-│   └── custom_chains.py             # Cadenas personalizadas
-│
+|
 ├── scripts/                         # Scripts auxiliares
 │   ├── setup_environment.sh         # Configuración del entorno
 │   ├── data_processing.py           # Procesamiento de datos
@@ -151,10 +138,8 @@ gen_ai_project_template/
 │
 ├── main.py                          # Punto de entrada principal
 ├── requirements.txt                 # Dependencias de Python
-├── requirements-dev.txt             # Dependencias de desarrollo
-├── pyproject.toml                   # Configuración del proyecto
 ├── setup.py                         # Instalación como paquete
-├── .env.example                     # Variables de entorno ejemplo
+├── .env                             # Variables de entorno ejemplo
 ├── .gitignore                       # Archivos ignorados por Git
 └── README.md                        # Este archivo
 ```
@@ -165,7 +150,7 @@ gen_ai_project_template/
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tu_usuario/gen_ai_project_template.git
+git clone https://github.com/jcoronelc/gen_ai_project_template.git
 cd gen_ai_project_template
 ```
 
@@ -193,9 +178,6 @@ cp .env.example .env
 ```bash
 python main.py
 ```
-
-
-
 ---
 
 ## 🔧 Módulos Principales
@@ -209,7 +191,6 @@ python main.py
 | **`src/utils/`** | Utilidades: logging, validaciones, parsers, etc. |
 | **`src/func/`** | Funciones específicas del dominio o negocio |
 | **`testing/`** | Tests unitarios y de integración automatizados |
-| **`examples/`** | Ejemplos prácticos de uso de la biblioteca |
 | **`scripts/`** | Scripts para setup, procesamiento y deployment |
 
 
@@ -292,16 +273,6 @@ response = agent.chat("¿Cuál es el PIB de España y calcula el 15%?")
 ```bash
 pip install -e .
 ```
-
-### Docker
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
-CMD ["python", "main.py"]
-```
-
 ---
 
 ## 🤝 Contribución
@@ -320,6 +291,3 @@ Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 
 ---
 
-=======
-# gen_ai_project_template
->>>>>>> 90c8360244ff6d02f6080bef5eddfc942b2ae002
