@@ -1,0 +1,68 @@
+catalog_model: # catalogo para usar en entorno de produccion
+  provider: ollama
+  llm_name: ministral-3:8b #nombre de la lista de abajo
+  embedding_name: 
+
+lmstudio:
+  embedding:
+    all-mini:
+      id: text-embedding-all-minilm-l6-v2-embedding
+    nomic:
+      id: text-embedding-nomic-embed-text-v1.5
+    qwen3-0.6b:
+      id: text-embedding-qwen3-embedding-0.6b
+    qwen3-8b:
+      id: text-embedding-qwen3-embedding-8b
+  models:
+    qwen3-4b:
+      id: qwen/qwen3-4b-2507
+    qwen3.5-9b:
+      id: qwen/qwen3.5-9b
+    gpt-oss-20b:
+      id: openai/gpt-oss-20b+
+    mistral-7b:
+      id: TheBloke/Mistral-7B-Instruct-v0.1-GGUF
+
+openai:
+  embedding: 
+    nomic: 
+      id: text-embedding-nomic-embed-text-v1.5
+  models:
+    gpt-4o-mini:
+      id: gpt-4o-mini
+      temperature: 0.7
+    gpt-4:
+      id: gpt-4
+      temperature: 0.7
+
+huggingface:
+  embedding: 
+    all-mini:
+      id: text-embedding-all-minilm-l6-v2-embedding
+  models:
+    mistral-7b:
+      id: mistral-7b-instruct-v0.1
+      temperature: 0.8
+
+ollama:
+  embedding: 
+    qwen3-0.6b:
+      id: text-embedding-qwen3-embedding-0.6b
+  models:
+    qwen3-4b:
+      id: qwen3:4b
+    gpt-oss-20b:
+      id: gpt-oss:20b
+    qwen3.5-9b:
+      id: qwen3.5:9b
+    ministral-3:8b:
+      id: ministral-3:8b
+
+google:
+  embedding: 
+    gemini-001:
+      id: gemini-embedding-001
+  models:
+    gemini-flash:
+      id: gemini-2.5-flash
+
