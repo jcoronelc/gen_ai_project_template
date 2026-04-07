@@ -4,6 +4,7 @@ from gen_ai_project_template.src.llm.local_models import LLMClient
 from gen_ai_project_template.src.prompt.templates.system_prompts import prompt_one
 from gen_ai_project_template.src.utils.decorators import load_config 
 from gen_ai_project_template.src.db.db_utils import get_engine, fun_connection_params
+from gen_ai_project_template.src.prompt.manage_templates import get_prompt_template
 from dotenv import load_dotenv
 
 import os
@@ -49,9 +50,9 @@ def main():
     # engine = set_enviroment()  #setting database enviroment
     llm_client = set_client_llm() #setting llm models
 
-    text = "cual es el pais mas grande del mundo"
-    prompt_completed = prompt_one(text)
-    response = llm_client.call(prompt_completed)
+    question = "cual es el pais mas grande del mundo"
+    prompt = get_prompt_template("prompt_example", {"question": question})
+    response = llm_client.call(prompt)
     print("####### RESPUESTA ######")
     print(response)
 
