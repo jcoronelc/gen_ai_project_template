@@ -8,7 +8,7 @@ import yaml
 import csv
 import pandas as pd
 
-from src.utils.fun_utils import seguimiento_funciones, msg_succ, msg_warn, msg_error, msg_info
+from gen_ai_project_template.src.utils.fun_utils import seguimiento_funciones, msg_succ, msg_warn, msg_error, msg_info
 
 @seguimiento_funciones
 def read_file(

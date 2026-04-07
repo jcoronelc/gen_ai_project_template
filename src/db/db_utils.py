@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from sqlalchemy.exc import SQLAlchemyError
 
-from utils.fun_utils import seguimiento_funciones, msg_succ, msg_warn, msg_error
+from gen_ai_project_template.src.utils.fun_utils import seguimiento_funciones, msg_succ, msg_warn, msg_error
 
 @seguimiento_funciones
 def fun_connection_params(host, port, database, user, password):

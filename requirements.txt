@@ -12,7 +12,7 @@ pymongo
 fastapi
 uvicorn
 python-dotenv
-psycopg2-binary
+psycopg2
 sqlalchemy
 
 # AI dependencies
@@ -20,13 +20,14 @@ openai
 crewai
 ollama
 langchain
+langchain_core
 transformers==4.46.0
 tokenizers==0.20.3
 sentence-transformers == 3.4.1
 google-genai
 chromadb
 crewai-tools
-
+lmstudio
 
 
 

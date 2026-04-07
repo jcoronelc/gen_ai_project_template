@@ -1,5 +1,5 @@
 
-from src.prompt.templates import prompt_example
+from gen_ai_project_template.src.prompt.templates import prompt_example
 
 def get_prompt_template(prompt_id: str, doc: dict):
 

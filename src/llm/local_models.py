@@ -3,9 +3,9 @@ from openai import OpenAI
 from huggingface_hub import InferenceClient
 
 class LLMClient:
-    def __init__(self, model, provider = "llm-studio", base_url=None, api_key=None):
+    def __init__(self, provider = "llm-studio", model_name=None, base_url=None, api_key=None):
         self.provider = provider.lower()
-        self.model = model
+        self.model = model_name
         self.base_url = base_url
         self.api_key = api_key
         self.client = self.init_client()

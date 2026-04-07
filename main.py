@@ -1,14 +1,18 @@
 
-from gen_ai_project_template.src.utils.logger import setup_print_logger
-from gen_ai_project_template.src.llm.local_models import LLMClient
-from gen_ai_project_template.src.prompt.templates.system_prompts import prompt_one
-from gen_ai_project_template.src.utils.decorators import load_config 
-from gen_ai_project_template.src.db.db_utils import get_engine, fun_connection_params
-from gen_ai_project_template.src.prompt.manage_templates import get_prompt_template
-from dotenv import load_dotenv
-
 import os
 import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
+from gen_ai_project_template.src.utils.logger import setup_print_logger
+# from gen_ai_project_template.src.llm.local_models import LLMClient #lmstudio
+from gen_ai_project_template.src.llm.llm_vm_client import LLMClient #ollama vm
+from gen_ai_project_template.src.prompt.manage_templates import get_prompt_template
+from gen_ai_project_template.src.utils.decorators import load_config 
+from gen_ai_project_template.src.db.db_utils import get_engine, fun_connection_params
+from dotenv import load_dotenv
+
 
 load_dotenv()
 
@@ -17,7 +21,7 @@ path_model = "config/model_config.yaml"
 BASE_URL_LM = os.getenv("BASE_URL_LM")
 OPENAI_KEY = os.getenv("OPENAI_KEY")
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 
 def set_enviroment():
